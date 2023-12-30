@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  color-scheme: dark;
+}
+
+.container {
+  @apply flex 
+  justify-center
+  items-center
+  bg-black
+  h-screen
+  gap-3;
+}
+
+.card {
+  @apply w-40
+    min-h-40
+    h-52
+    bg-gray-900
+    flex
+    justify-center
+    items-center
+    flex-col
+    rounded-md
+    transition-all;
+}
+
+.icon {
+  color: gray;
+}
+.title {
+  color: gray;
+}
+.lorem {
+  @apply text-xs
+    flex-none
+    w-3/4
+    h-12
+    text-white;
+}
+
+.card:hover .icon {
+  @apply text-5xl
+    py-1
+    text-white
+    transition-all;
+}
+.card:hover .title {
+  display: none;
+  transition: 0.3s;
+}
+.card:hover .lorem {
+  display: block;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.125);
+  background: linear-gradient(
+    324deg,
+    rgba(167, 37, 20, 1) 0%,
+    rgba(255, 0, 159, 1) 30%,
+    rgba(255, 101, 47, 1) 100%
+  );
+  box-shadow: 4px 4px 40px 0px rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
